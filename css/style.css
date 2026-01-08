@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+}
+html{
+    margin: 0px 50px;
+}
+nav{
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div{
+    margin: 30px 0px;
+}
+.introduction, .technologies, .work, .projects, .certified, .contacts{
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.about-me, p{
+    margin: 10px 0px;
+    text-align: justify;
+}
+p{
+    margin: 10px 0px;
+}
+.cv{
+    height: 45px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+}
+.title{
+    text-align: center;
+    margin: 0px;
+}
+.language{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px;
+}

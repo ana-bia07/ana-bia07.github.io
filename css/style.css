@@ -40,3 +40,9 @@ p{
     justify-content: space-evenly;
     margin: 0px;
 }
+.card-projects{
+    width: 90%;
+}
+.card-img{
+    width: 450px;
+}

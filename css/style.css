@@ -1,48 +1,128 @@
-*{
-    margin: 0px;
+body {
+    background-color: #0f0427; /* A cor que você escolheu */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-html{
-    margin: 0px 50px;
-}
-nav{
-    margin: 8px;
+
+/* Navbar */
+nav {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
 }
-div{
-    margin: 30px 0px;
+
+nav a {
+    color: #d1b3ff;
+    text-decoration: none;
+    font-weight: bold;
 }
-.introduction, .technologies, .work, .projects, .certified, .contacts{
-    padding: 12px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-.about-me, p{
-    margin: 10px 0px;
-    text-align: justify;
-}
-p{
-    margin: 10px 0px;
-}
-.cv{
-    height: 45px;
-    width: 100px;
-    border-radius: 5px;
-    border: none;
-}
-.title{
+
+/* Títulos Centrais */
+.title, h1, h2 {
     text-align: center;
-    margin: 0px;
+    margin-bottom: 20px;
+    color: #ffffff;
 }
-.language{
+
+h2 {
+    color: #b388ff;
+    color: #ffffff; /* Roxo mais vivo para títulos */
+}
+
+/* Estilização das Divs (Containers) */
+.introduction, .technologies, .work, .projects, .certified, .contacts {
+    background-color: #1e0b4a; /* Roxo mais claro que o fundo */
+    max-width: 800px;         /* Limita a largura */
+    margin: 40px auto;        /* Centraliza a div na tela */
+    padding: 30px;
+    border-radius: 15px;      /* Bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+}
+
+.cv {
+    background-color: #7c4dff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+}
+/* Tecnologias - Uma ao lado da outra */
+.language {
     display: flex;
-    justify-content: space-evenly;
-    margin: 0px;
+    flex-wrap: wrap;       /* Quebra a linha se não couber */
+    justify-content: center;
+    gap: 15px;
 }
-.card-projects{
-    width: 90%;
+
+.language p, p {
+    color: #ffffff;
+    margin: 0;
 }
-.card-img{
-    width: 450px;
+
+/* Container dos certificados */
+.certified .cards {
+    display: grid;
+    /* Cria 2 colunas com tamanhos iguais */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; /* Espaço entre os cards */
+    margin-top: 20px;
+}
+
+/* Ajuste para os cards do Bootstrap não ficarem gigantes */
+.certified .card {
+    border: none;
+    background-color: transparent; /* Deixa aparecer o roxo da sua div pai */
+    overflow: hidden;
+}
+
+.certified .card-img {
+    border-radius: 10px;
+    opacity: 0.6; /* Deixa a imagem mais escurinha para o texto aparecer */
+    transition: 0.3s;
+}
+
+.certified .card:hover .card-img {
+    opacity: 1; /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Responsividade: No celular, vira 1 coluna só */
+@media (max-width: 768px) {
+    .certified .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contatos - Um embaixo do outro */
+.links {
+    display: flex;
+    flex-direction: column; /* Alinha em coluna */
+    align-items: center;    /* Centraliza horizontalmente */
+    gap: 10px;
+}
+
+.links a {
+    color: #e0d0ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #7c4dff;
+}
+
+/* Botão CV */
+
+/* Ajuste do Carrossel para não ficar gigante */
+#carouselExampleIndicators {
+    max-width: 600px;
+    margin: 0 auto 20px;
 }
